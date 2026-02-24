@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Llamada al archivo de la barra de navegación -->
+<div id="navbar"></div>
+<script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+</script>
+
+    <!-- HERO SECTION -->
+    <section class="hero2">
+        <div class="hero-content">
+            <h1>¿LISTO PARA RODAR?</h1>
+            <p>Agenda una prueba de manejo y<br>
+                experimenta la potencia de nuestras</p>
+
+            <div class="hero-buttons">
+                <button class="btn-primary">AGENDAR PRUEBA</button>
+                <button class="btn-secondary">CONTACTAR ASESOR</button>
+            </div>
+        </div>
+    </section>
+
+<!-- Llamada al archivo de la barra de navegación -->
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+</body>
+</html>

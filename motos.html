@@ -1,0 +1,146 @@
+        <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+
+<!-- Llamada al archivo de la barra de navegación -->
+<div id="navbar"></div>
+<script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+</script>
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Motos</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>             
+
+    <h1>Catálogo de Motocicletas </h1>
+
+    <div class="grid">
+        <div class="card">
+        <img src="img/Motocicleta Vento Lithium 200 cc 2026.webp" alt="Motocicleta Vento Lithium">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">Motocicleta Vento Lithium 200 cc 2026</div>
+            <div>
+            <span class="precio">$22,999</span>
+            <span class="precio-anterior">$29,999</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="img/Cuatrimoto Vento Reptile Trek 200 cc 2026.webp" alt="Cuatrimoto Vento Reptile">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">Cuatrimoto Vento Reptile Trek 200 cc 2026</div>
+            <div>
+            <span class="precio">$40,999</span>
+            <span class="precio-anterior">$55,000</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="img/Motocicleta Vento Xpress Sport 170 cc 2026.jfif" alt="Motocicleta Vento Xpress">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">Motocicleta Vento Xpress Sport 170 cc 2026</div>
+            <div>
+            <span class="precio">$18,999</span>
+            <span class="precio-anterior">$26,000</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+
+        <div class="card">
+        <img src="img/Motocicleta Vento Ruda F4 200 cc 2026.jfif" alt="Motocicleta Vento Ruda F4">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">Motocicleta Vento Ruda F4 200 cc 2026</div>
+            <div>
+            <span class="precio">$22,999</span>
+            <span class="precio-anterior">$29,699</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+            </div>
+
+        <div class="card">
+        <img src="img/Motocicleta Vento Cyclone 200 cc 2026.webp" alt="Motocicleta Vento Cyclone">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">Motocicleta Vento Cyclone 200 cc 2026</div>
+            <div>
+            <span class="precio">$27,999</span>
+            <span class="precio-anterior">$35,000</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+        <div class="card">
+        <img src="img/vento-storm-300-2-16.jpg" alt="Cuatrimoto Vento Reptile">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">STORM 300 2.02026</div>
+            <div>
+            <span class="precio">$40,999</span>
+            <span class="precio-anterior">$55,000</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+        <div class="card">
+        <img src="img/CROSSMAX 3OO PRO.jpg" alt="Cuatrimoto Vento Reptile">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">CROSSMAX 3OO PRO modelo 202</div>
+            <div>
+            <span class="precio">$40,999</span>
+            <span class="precio-anterior">$55,000</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+        <div class="card">
+        <img src="img/Motoneta Vento Street Rod 170 Roja 2025.webp" alt="Cuatrimoto Vento Reptile">
+        <div class="card-content">
+            <div class="oferta">Oferta</div>
+            <div class="titulo">Motoneta Vento Street Rod 170 Roja 2025</div>
+            <div>
+            <span class="precio">$40,999</span>
+            <span class="precio-anterior">$55,000</span>
+            </div>
+            <div class="financiamiento">Desde $ quincenal</div>
+        </div>
+        </div>
+    </div>
+
+    </body>
+</html>
+    <!-- Llamada al archivo de la barra de navegación -->
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
