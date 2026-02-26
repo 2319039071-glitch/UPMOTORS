@@ -9,14 +9,23 @@
     <body>
 
 <!-- Llamada al archivo de la barra de navegación -->
-<div id="navbar"></div>
-<script>
-    fetch("navbar.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("navbar").innerHTML = data;
-        });
-</script>
+        <div id="navbar"></div>
+
+        <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                // 🔥 ACTIVAR MENÚ DESPUÉS DE CARGARLO
+                const toggle = document.getElementById("menu-toggle");
+                const nav = document.getElementById("nav");
+
+                toggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+            });
+        </script>
 
     <!DOCTYPE html>
     <html lang="es">
@@ -41,6 +50,9 @@
             <span class="precio-anterior">$29,999</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
         </div>
 
@@ -54,7 +66,11 @@
             <span class="precio-anterior">$55,000</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
+
         </div>
 
         <div class="card">
@@ -67,6 +83,9 @@
             <span class="precio-anterior">$26,000</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
         </div>
 
@@ -80,6 +99,9 @@
             <span class="precio-anterior">$29,699</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
             </div>
 
@@ -93,6 +115,9 @@
             <span class="precio-anterior">$35,000</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
         </div>
         <div class="card">
@@ -105,6 +130,9 @@
             <span class="precio-anterior">$55,000</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
         </div>
         <div class="card">
@@ -117,6 +145,9 @@
             <span class="precio-anterior">$55,000</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
         </div>
         <div class="card">
@@ -129,6 +160,9 @@
             <span class="precio-anterior">$55,000</span>
             </div>
             <div class="financiamiento">Desde $ quincenal</div>
+            <a href="metodoDePago.html" class="btn-comprar">
+            Ver método de pago
+        </a>
         </div>
         </div>
     </div>

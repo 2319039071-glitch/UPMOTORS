@@ -1,0 +1,98 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* FONDO PRINCIPAL CON MOTO */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height:100vh;
+
+    background-image: url("https://images.unsplash.com/photo-1558981403-c5f9899a28bc");
+    background-size: cover;        /* Ocupa toda la pantalla */
+    background-position: center;   /* Centrada */
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  /* Efecto elegante */
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* OSCURECER FONDO */
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+    top:0;
+    left:0;
+}
+
+/* CONTENEDOR */
+.welcome-container{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* CAJA CENTRAL */
+.welcome-box{
+    position:relative;
+    text-align:center;
+    color:white;
+    max-width:500px;
+    padding:40px;
+    z-index:2;
+}
+
+.welcome-box h1{
+    font-size:40px;
+    color:#ff3b3b;
+    margin-bottom:20px;
+}
+
+.welcome-box p{
+    margin-bottom:30px;
+    color:#ccc;
+}
+
+/* BOTONES */
+.buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#ff3b3b;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#e11d48;
+}
+
+.btn-outline{
+    border:2px solid #ff3b3b;
+    color:#ff3b3b;
+}
+
+.btn-outline:hover{
+    background:#ff3b3b;
+    color:white;
+}

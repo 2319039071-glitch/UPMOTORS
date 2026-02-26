@@ -7,42 +7,64 @@
 </head>
 <body>
 
-    <!-- FORMULARIO DE LOGIN -->
-    <section class="hero">
-        <h1>Bienvenido de nuevo</h1>
-        <h2>Iniciar Sesión</h2>
-        <p>Accede a tu cuenta para continuar disfrutando de nuestros servicios.</p>
+<section class="hero">
+    <h1>Bienvenido de nuevo</h1>
+    <h2>Iniciar Sesión</h2>
+    <p>Accede a tu cuenta para continuar disfrutando de nuestros servicios.</p>
 
-        <div class="container">
-            <div class="form-box" style="max-width: 400px; margin: 0 auto; background-color: #1f2833; padding: 40px; border-radius: 10px;">
-                <form>
-                    <div class="input-group" style="margin-bottom: 20px;">
-                        <label style="display: block; margin-bottom: 5px;">Correo Electrónico</label>
-                        <input type="email" placeholder="tu@ejemplo.com" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
-                    </div>
+    <div class="container">
+        <div class="form-box" style="max-width: 400px; margin: 0 auto; background-color: #1f2833; padding: 40px; border-radius: 10px;">
+            
+            <form id="loginForm">
+                
+                <div class="input-group" style="margin-bottom: 20px;">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="tu@ejemplo.com" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+                </div>
 
-                    <div class="input-group" style="margin-bottom: 20px;">
-                        <label style="display: block; margin-bottom: 5px;">Contraseña</label>
-                        <input type="password" placeholder="****" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
-                    </div>
+                <div class="input-group" style="margin-bottom: 20px;">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" placeholder="****" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+                </div>
 
-                    <div class="options" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: 0.9rem;">
-                        <label>
-                            <input type="checkbox"> Recordarme
-                        </label>
-                        <a href="#" class="forgot" style="color: #e63946;">¿Olvidaste tu contraseña?</a>
-                    </div>
+                <div class="options" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: 0.9rem;">
+                    <label>
+                        <input type="checkbox"> Recordarme
+                    </label>
+                    <a href="recuperarContrsena.html" class="forgot" style="color: #e63946;">¿Olvidaste tu contraseña?</a>
+                </div>
 
-                    <button type="submit" class="btn btn-red" style="width: 100%;">Ingresar</button>
+                <button type="submit" class="btn btn-red" style="width: 100%;">
+                    Ingresar
+                </button>
 
-                    <p class="register-link" style="margin-top: 20px; color: #ccc;">
-                        ¿No tienes cuenta?
-                        <a href="#" style="color: #e63946;">Registrarse</a>
-                    </p>
-                </form>
-            </div>
+                <p class="register-link" style="margin-top: 20px; color: #ccc;">
+                    ¿No tienes cuenta?
+                    <a href="registro.html" style="color: #e63946;">Registrarse</a>
+                </p>
+
+            </form>
+
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    if(email === "" || password === ""){
+        alert("Por favor completa todos los campos.");
+        return;
+    }
+
+    // Si todo está lleno, redirige
+    window.location.href = "inicio.html";
+});
+</script>
 
 </body>
 </html>

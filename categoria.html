@@ -9,15 +9,23 @@
     <body>
 
 <!-- Llamada al archivo de la barra de navegación -->
-<div id="navbar"></div>
-<script>
-    fetch("navbar.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("navbar").innerHTML = data;
-        });
-</script>
+        <div id="navbar"></div>
 
+        <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                // 🔥 ACTIVAR MENÚ DESPUÉS DE CARGARLO
+                const toggle = document.getElementById("menu-toggle");
+                const nav = document.getElementById("nav");
+
+                toggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+            });
+        </script>
     <section class="categorias">
         <h5>EXPLORA</h5>
         <h2>CATEGORÍAS</h2>

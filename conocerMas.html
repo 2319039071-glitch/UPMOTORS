@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UPMOTORS | Conocer Más</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ENLACE AL CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- Llamada al archivo de la barra de navegación -->
+        <div id="navbar"></div>
+
+        <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                // 🔥 ACTIVAR MENÚ DESPUÉS DE CARGARLO
+                const toggle = document.getElementById("menu-toggle");
+                const nav = document.getElementById("nav");
+
+                toggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+            });
+        </script>
+
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Innovación y Rendimiento 2026</h1>
+    <p>
+        En UPMOTORS diseñamos motocicletas con tecnología avanzada,
+        máximo rendimiento y un estilo agresivo que redefine la experiencia
+        de conducción.
+    </p>
+</section>
+
+<!-- INFORMACIÓN -->
+<section class="info-section">
+
+    <div class="card">
+        <h3>⚡ Motores de Alto Desempeño</h3>
+        <p>
+            Tecnología optimizada para mayor potencia,
+            mejor aceleración y eficiencia de combustible.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🛡 Seguridad Avanzada</h3>
+        <p>
+            Sistema de frenos ABS, control de tracción
+            y estabilidad en cualquier terreno.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🎨 Diseño Premium</h3>
+        <p>
+            Estética moderna, aerodinámica y acabados
+            de alta calidad para un estilo imponente.
+        </p>
+    </div>
+
+</section>
+
+<!-- UBICACIÓN -->
+<section class="ubicacion">
+
+    <h2>Nuestra Ubicación</h2>
+
+    <div class="ubicacion-contenido">
+
+        <div class="datos">
+            <p><strong>📍 Dirección:</strong><br>
+            Av. Revolución 1250,<br>
+            Col. Centro Industrial,<br>
+            Ciudad Motor, MX 42000</p>
+
+            <p><strong>☎ Teléfono:</strong><br>
+            +52 771 000 2026</p>
+
+            <p><strong>✉ Email:</strong><br>
+            contacto@upmotors.com</p>
+        </div>
+
+        <div class="mapa">
+            <iframe 
+                src="https://maps.google.com/maps?q=Mexico&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Llamada al archivo de la barra de navegación -->
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+</body>
+</html>

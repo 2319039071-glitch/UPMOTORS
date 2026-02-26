@@ -1,26 +1,5 @@
 
     
-/* =========================
-CELULAR (480px o menos)
-========================= */
-
-@media (max-width: 480px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    .navbar {
-        padding: 10px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-}
-    
-    
     
     
     * {
@@ -147,7 +126,7 @@ CELULAR (480px o menos)
 
     .btn-outline {
     background: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #cb1212;
     color: #fff;
     }
 
@@ -222,7 +201,7 @@ CELULAR (480px o menos)
     .card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(228, 44, 44, 0.1);
     overflow: hidden;
     transition: transform 0.2s ease;
     }
@@ -310,19 +289,25 @@ header {
     font-weight: 600;
 }
 
-/* LAYOUT */
+/* Centrar todo el main checkout */
 .checkout-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    padding: 60px;
+    background-color: #0b0c10;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    min-height: 100vh;       /* Ocupa toda la altura de la ventana */
+    padding: 20px;           /* Espaciado interno */
+    box-sizing: border-box;
 }
 
-/* FORM */
+/* Ajustar el formulario para que no sea muy ancho en pantallas grandes */
 .checkout-form {
-    background-color: #111;
-    padding: 40px;
+    width: 100%;
+    max-width: 500px; /* ancho máximo del formulario */
+    background-color: #1a242d;
+    padding: 30px;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .checkout-form h2 {
@@ -407,6 +392,22 @@ header {
     .checkout-container {
         grid-template-columns: 1fr;
     }
+}
+
+.btn-comprar{
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e63946;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover{
+    background-color: #c1121f;
 }
 
 
@@ -515,6 +516,7 @@ header {
 
     #menu-toggle-checkbox:checked ~ .nav-mobile {
         right: 0;
+        
     }
 
     .nav-mobile ul {
@@ -539,4 +541,187 @@ header {
         color: #fff;
         cursor: pointer;
     }
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0b0c10;
+    color:white;
+}
+
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.back-link{
+    color:white;
+    text-decoration:none;
+}
+
+.back-link:hover{
+    color:#ff3b3b;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 10%;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#ff3b3b;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px auto;
+    line-height:1.6;
+    color:#ccc;
+}
+
+/* INFO SECTION */
+.info-section{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    padding:60px 8%;
+}
+
+/* CARDS */
+.card{
+    background:#111827;
+    padding:30px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#1f2937;
+}
+
+.card h3{
+    color:#ff3b3b;
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#ff3b3b;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e11d48;
+}
+
+.center{
+    text-align:center;
+}
+
+/* UBICACIÓN */
+.ubicacion{
+    padding:60px 8%;
+    background:#0f172a;
+    text-align:center;
+}
+
+.ubicacion h2{
+    color:#ff3b3b;
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+.ubicacion-contenido{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+}
+
+.datos{
+    max-width:300px;
+    text-align:left;
+    line-height:1.6;
+    color:#ccc;
+}
+
+.mapa{
+    width:350px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:30px;
+    background:#0b0c10;
+    margin-top:50px;
+    color:#aaa;
+}
+
+/* BOTÓN LOGIN VISIBLE */
+.login-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edeae7;      /* color destacado */
+    color: #fff;
+    padding: 8px 12px;              /* espacio interno para que se vea como botón */
+    border-radius: 8px;             /* esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+    transition: all 0.3s ease;
+}
+
+/* Imagen dentro del botón */
+.login-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Hover */
+.login-icon:hover {
+    background-color: #dbd7d5;      /* cambia un poco el color */
+    transform: scale(1.05);         /* pequeño zoom */
+    cursor: pointer;
+}
+
+/* Versión móvil: un poco más grande y centrado */
+.nav-mobile .login-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 50%;             /* redondo en móvil */
+    background-color: #ebe8e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-mobile .login-icon img {
+    width: 30px;
+    height: 30px;
 }
