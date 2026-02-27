@@ -725,3 +725,111 @@ body{
     width: 30px;
     height: 30px;
 }
+/* ========================= */
+/* RECUPERAR CONTRASEÑA */
+/* ========================= */
+
+.recovery-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:linear-gradient(135deg, #0b0c10, #111827);
+}
+
+.recovery-box{
+    width:100%;
+    max-width:420px;
+    background:#1a242d;
+    padding:40px 30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    text-align:center;
+    animation:fadeIn 0.5s ease-in-out;
+}
+
+.recovery-box h2{
+    color:#e63946;
+    margin-bottom:15px;
+}
+
+.recovery-box p{
+    color:#ccc;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.input-group{
+    text-align:left;
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    font-size:13px;
+    margin-bottom:6px;
+    color:#aaa;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#0f172a;
+    color:white;
+    outline:none;
+    transition:0.3s;
+}
+
+.input-group input:focus{
+    border:1px solid #e63946;
+    box-shadow:0 0 8px rgba(230,57,70,0.4);
+}
+
+/* BOTÓN (usa tu clase .btn existente) */
+.recovery-box .btn{
+    width:100%;
+    margin-top:10px;
+    background:#e63946;
+    color:white;
+}
+
+.recovery-box .btn:hover{
+    background:#c1121f;
+}
+
+/* LINK VOLVER */
+.back-link{
+    margin-top:20px;
+}
+
+.back-link a{
+    text-decoration:none;
+    color:#e63946;
+    font-size:14px;
+}
+
+.back-link a:hover{
+    text-decoration:underline;
+}
+
+/* Animación */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .recovery-box{
+        padding:30px 20px;
+    }
+}
